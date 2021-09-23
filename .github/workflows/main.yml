@@ -42,6 +42,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          echo workflowname: $env:GITHUB_WORKFLOW
       
       - name: Archive artifacts
         uses: actions/upload-artifact@v2
