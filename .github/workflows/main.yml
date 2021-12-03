@@ -30,6 +30,11 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: Dump event inputs
+        env:
+          EVENT_INPUTS: ${{ toJSON(github.event.inputs) }}
+        run: echo "$EVENT_INPUTS"
+    
       - name: Dump GitHub context
         env:
           GITHUB_CONTEXT: ${{ toJSON(github) }}
